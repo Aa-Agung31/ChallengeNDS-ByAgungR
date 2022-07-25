@@ -29,7 +29,7 @@ export default function Home() {
   const isValidFormData = () => {
     if (!name) {
       return toast({
-        title: "Preencha o campo nome!!",
+        title: "Masukan Nama Anda!!",
         status: "error",
         duration: 9000,
         isClosable: true,
@@ -37,7 +37,7 @@ export default function Home() {
     }
     if (!email) {
       return toast({
-        title: "Preencha o campo e-mail!",
+        title: "Masukan e-mail Anda!",
         status: "error",
         duration: 9000,
         isClosable: true,
@@ -45,7 +45,7 @@ export default function Home() {
     }
     if (clients.some((client) => client.email === email && client._id !== id)) {
       return toast({
-        title: "E-mail já cadastrado!",
+        title: "E-mail Sudah Terdaftar!",
         status: "error",
         duration: 9000,
         isClosable: true,
@@ -65,7 +65,7 @@ export default function Home() {
       setEmail("");
       setIsFormOpen(!isFormOpen);
       toast({
-        title: "Cadastrado com sucesso!",
+        title: "Berhasil Terdaftar!",
         status: "success",
         duration: 9000,
         isClosable: true,
@@ -81,7 +81,7 @@ export default function Home() {
     try {
       await api.delete(`/clients/${_id}`);
       toast({
-        title: "Deletado com sucesso!!",
+        title: "Berhasil Dihapus!!",
         status: "info",
         duration: 9000,
         isClosable: true,
@@ -112,7 +112,7 @@ export default function Home() {
       setIsFormOpen(!isFormOpen);
 
       toast({
-        title: "Atualizado com sucesso!",
+        title: "Data Berhasil Di Update!",
         status: "success",
         duration: 9000,
         isClosable: true,
@@ -161,10 +161,10 @@ export default function Home() {
               onSubmit={id ? handleUpdateClient : handleSubmitCreateClient}
             >
               <FormControl>
-                <FormLabel>Nome</FormLabel>
+                <FormLabel>Nama</FormLabel>
                 <Input
                   type="text"
-                  placeholder="Digite nome"
+                  placeholder="Masukan Nama Anda"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                 />
@@ -174,7 +174,7 @@ export default function Home() {
                 <FormLabel>Email</FormLabel>
                 <Input
                   type="email"
-                  placeholder="Digite o e-mail"
+                  placeholder="Masukan Akun e-mail"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                 />
@@ -186,7 +186,7 @@ export default function Home() {
                 mt={6}
                 isLoading={isLoading}
               >
-                {id ? "Atualizar" : "Cadastrar"}
+                {id ? "Update" : "Daftar"}
               </Button>
             </VStack>
           ) : null}
@@ -213,7 +213,7 @@ export default function Home() {
                         mr="2"
                         onClick={() => handlShowUpdateClient(client)}
                       >
-                        Editar
+                        Edit
                       </Button>
                       <Button
                         size="sm"
@@ -222,7 +222,7 @@ export default function Home() {
                         mr="2"
                         onClick={() => handleDeleteClient(client._id)}
                       >
-                        Remover
+                        Delete
                       </Button>
                     </Flex>
                   </Td>
