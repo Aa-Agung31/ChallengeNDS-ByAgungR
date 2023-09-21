@@ -1,0 +1,46 @@
+.ikyboy{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin: ;
+}
+.linkboy{
+    text-decoration: none;
+}
+h3{
+    text-align: center;
+}
+/* Style the header */
+h2 {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+ 
+.menuboy {
+    overflow: hidden;
+    background-color: #3f70f7;
+  }
+  
+  .menuboy a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .menuboy a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .footerboy {
+    text-align: center;
+    background-color: #3f70f7;
+    padding: 8px 12px;
+
+  }
